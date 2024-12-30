@@ -1,0 +1,5 @@
+n, m = map(int, input().split())
+stu = sorted(list(map(int, input().split())))
+differ = sorted([stu[i + 1] - stu[i] for i in range(n - 1)])
+differ.reverse()
+print(stu[n - 1] - stu[0] - sum(differ[:m - 1]))
